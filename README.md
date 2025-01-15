@@ -49,7 +49,7 @@ First, the source force item is handled, and the processing of it is also in pro
 
 It is an excellent approximation within the _Δt_ time interval and is highly compatible with interactive systems. The effect of force occurs only at the beginning of each moment.
 
-Next, the convection terms are calculated. Since the velocity field and density fields are solved similarly, the relatively complex velocity field is directly explained. It is precise because of the existence of _−(**u** · ∇)**u**_ that the Navier-Stokes equation becomes a nonlinear equation. Foster and Metaxas use the finite difference method when processing this term. Their algorithm can only guarantee stability when the time step is tiny, and the condition is _∆t < ∆τ/|**u**|_, where delta t is the scale of the current computing grid. Here uses Stam's semi-Lagrangian characteristic line solution method. Convection item questions can be abstracted into the following form:
+Next, the convection terms are calculated. Since the velocity field and density fields are solved similarly, the relatively complex velocity field is directly explained. It is precise because of the existence of _-(**u** · ∇)**u**_ that the Navier-Stokes equation becomes a nonlinear equation. Foster and Metaxas use the finite difference method when processing this term. Their algorithm can only guarantee stability when the time step is tiny, and the condition is _∆t < ∆τ/|**u**|_, where delta t is the scale of the current computing grid. Here uses Stam's semi-Lagrangian characteristic line solution method. Convection item questions can be abstracted into the following form:
 
 <div align=center>
     <img width="355" src="https://user-images.githubusercontent.com/20459298/233126345-7b90aa2c-b147-420d-9d68-99ed359fc419.PNG"/>
@@ -121,7 +121,7 @@ After the Poisson problem's discretization, a sparse linear system is obtained w
     <img width="135" src="https://user-images.githubusercontent.com/20459298/233127056-809cead7-1944-4dd5-a17c-cb4be34851a9.PNG"/>
 </div>
 
-The gradient operator _∇_ in Fourier space can be equivalent to multiplying by _i**k**_, where _i^2 = −1_. In this way, the calculation of the previous diffusion operator and projection operator will become very simple:
+The gradient operator _∇_ in Fourier space can be equivalent to multiplying by _i**k**_, where _i^2 = -1_. In this way, the calculation of the previous diffusion operator and projection operator will become very simple:
 
 <div align=center>
     <img width="275" src="https://user-images.githubusercontent.com/20459298/233127111-20f4e20c-0e63-414c-a8dd-e7bd10e84157.PNG"/>
