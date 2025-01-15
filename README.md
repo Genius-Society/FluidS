@@ -1,4 +1,4 @@
-﻿# FluidS
+﻿<h1>FluidS</h1>
 
 [![license](https://img.shields.io/github/license/Genius-Society/FluidS.svg)](https://github.com/Genius-Society/FluidS/blob/main/LICENSE)
 [![Build status](https://ci.appveyor.com/api/projects/status/b531gepjilv9m6ko?svg=true)](https://ci.appveyor.com/project/Genius-Society/fluids)
