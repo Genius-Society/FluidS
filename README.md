@@ -5,9 +5,9 @@
 [![sf](https://img.shields.io/badge/release-SourceForge-ff6600.svg)](https://sourceforge.net/projects/fluid-simulator/files)
 [![bili](https://img.shields.io/badge/bilibili-BV1hYrgYxEvG-fc8bab.svg)](https://www.bilibili.com/video/BV1hYrgYxEvG)
 
-其仿真过程的核心算法参考了 Robert Bridson 的 _Fluid Simulation for Computer Graphics_。它使用 Navier-Stokes 方程的数值解来预测 Qt 的 OpenGL 小部件中显示的每一帧中粒子的密度和速度分布。有两种分辨率可供用户选择: 64 x 64 和 128 x 128。用户还可以在 7 种颜色的密度和速度之间切换显示模式。
+它使用 Navier-Stokes 方程的数值解来预测 Qt 的 OpenGL 小部件中显示的每一帧中粒子的密度和速度分布。有两种分辨率可供用户选择: 64 x 64 和 128 x 128。用户还可以在 7 种颜色的密度和速度之间切换显示模式。
 
-Its core algorithm of the simulation process refers to Robert Bridson's _Fluid Simulation for Computer Graphics_. It uses the numerical solution of Navier-Stokes equations to predict the density and velocity distribution of particles in each frame displayed in the OpenGL widget of Qt. There are two resolution options for users: 64 x 64 and 128 x 128. Users can also change display mode between density and velocity in 7 colors.
+It uses the numerical solution of Navier-Stokes equations to predict the density and velocity distribution of particles in each frame displayed in the OpenGL widget of Qt. There are two resolution options for users: 64 x 64 and 128 x 128. Users can also change display mode between density and velocity in 7 colors.
 
 | ![](https://user-images.githubusercontent.com/20459298/233125917-4eb82aec-a305-4e92-8bb7-88fb5f52d775.PNG) | ![](https://user-images.githubusercontent.com/20459298/233125957-1e9ed77d-85f5-40a5-873d-86efc9adba2f.PNG) |
 | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
@@ -24,17 +24,14 @@ cd FluidS
 
 Please refer to this [blog post](https://www.cnblogs.com/Genius-Society/p/17017063.html) for this section.
 
-# 英文版核心算法浅讲 An intro to the core algorithm
+## 英文版核心算法浅讲 An intro to the core algorithm
 The core problems solved are as follows:
 
 <div align=center> 
     <img width="215" src="https://user-images.githubusercontent.com/20459298/233126128-b877e41e-d323-4ba3-836b-2a8600b5bd88.png"/>
 </div>
 
-Since the equations to be processed are made in two lines in real-time, one is the velocity field, and the other is the density field. And what we're going to end up visualizing is the latter. However, real-time updates of the former are also essential because the latter's real-time updates need to be supported by the former.
-
-## Core process
-The solution flow for the speed field and the density field is as follows:
+Since the equations to be processed are made in two lines in real-time, one is the velocity field, and the other is the density field. And what we're going to end up visualizing is the latter. However, real-time updates of the former are also essential because the latter's real-time updates need to be supported by the former. The solution flow for the speed field and the density field is as follows:
 
 <div align=center>
     <b>Figure 1: Velocity field and density field solution process</b><br>
@@ -134,3 +131,6 @@ The gradient operator _∇_ in Fourier space can be equivalent to multiplying by
 </div>
 
 The last task is to embed the adaptive grid algorithm into each solution plate. As mentioned earlier, the density gradient is used as a criterion. If the density gradient at the center of a block exceeds the threshold, the mesh subdivides and solves the problem. According to the density gradient level, you can determine how many degrees the area needs to be divided so that it is determined to iterate on until the highest density gradient is completed.
+
+## 参考引用 Reference
+- [Bridson, R. (2015). Fluid simulation for computer graphics. AK Peters/CRC Press.](https://api.pageplace.de/preview/DT0400.9781482232844_A35196471/preview-9781482232844_A35196471.pdf)
