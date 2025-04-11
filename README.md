@@ -1,7 +1,7 @@
 ﻿<h1>FluidS</h1>
 
 [![license](https://img.shields.io/github/license/Genius-Society/FluidS.svg)](https://github.com/Genius-Society/FluidS/blob/main/LICENSE)
-[![Build status](https://ci.appveyor.com/api/projects/status/b531gepjilv9m6ko?svg=true)](https://ci.appveyor.com/project/Genius-Society/fluids)
+[![Build status](https://ci.appveyor.com/api/projects/status/b531gepjilv9m6ko/branch/main?svg=true)](https://ci.appveyor.com/project/Genius-Society/fluids/branch/main)
 [![sf](https://img.shields.io/badge/release-SourceForge-ff6600.svg)](https://sourceforge.net/projects/fluid-simulator/files)
 [![bili](https://img.shields.io/badge/bilibili-BV1hYrgYxEvG-fc8bab.svg)](https://www.bilibili.com/video/BV1hYrgYxEvG)
 
