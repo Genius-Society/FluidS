@@ -15,7 +15,7 @@ It uses the numerical solution of Navier-Stokes equations to predict the density
 
 ## 代码下载 Code download
 ```bash
-git clone https://github.com/Genius-Society/FluidS.git
+git clone git@github.com:Genius-Society/FluidS.git
 cd FluidS
 ```
 
