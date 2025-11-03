@@ -132,5 +132,5 @@ The gradient operator _∇_ in Fourier space can be equivalent to multiplying by
 
 The last task is to embed the adaptive grid algorithm into each solution plate. As mentioned earlier, the density gradient is used as a criterion. If the density gradient at the center of a block exceeds the threshold, the mesh subdivides and solves the problem. According to the density gradient level, you can determine how many degrees the area needs to be divided so that it is determined to iterate on until the highest density gradient is completed.
 
-## 参考引用 Reference
+## 致谢 Thanks
 - [Bridson, R. (2015). Fluid simulation for computer graphics. AK Peters/CRC Press.](https://api.pageplace.de/preview/DT0400.9781482232844_A35196471/preview-9781482232844_A35196471.pdf)
